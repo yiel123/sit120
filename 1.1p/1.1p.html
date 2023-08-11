@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My website</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 10px;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+
+        button.a {
+            color: blue;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        img {
+            width: 250px;
+            height:150px;
+        }
+
+        /* having element tableContent id defined in internal css represented by # to apply these styles to such element */
+        #tableContent {
+            display: none;
+            margin:0 auto;
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>1.1P task website</h1>
+    <h2>Contact Details</h2>
+    <div class="button-container">
+        <button class="a" id="showTableButton" onclick="toggleTable()">Click Me</button>
+    </div>
+    <table id="tableContent">
+        <tr>
+            <th>Name</th>
+            <th colspan="2">Email</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Friend One</td>
+            <td>Work</td>
+            <td>abc@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Personal</td>
+            <td>abc@gmail.com</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Friend Two</td>
+            <td>Work</td>
+            <td>abc@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Personal</td>
+            <td>abc@gmail.com</td>
+        </tr>
+    </table>
+    <p>The above table acts as a means of reminding you of your friends' email</p>
+    <img src="goku.jpg" alt="normal goku">
+    <div id="footer">
+        <p>&copy; 2023 My Website. All rights reserved.</p>
+    </div>    
+    <form>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname">
+    </form>
+
+    <script>
+        function toggleTable() {
+            let table = document.getElementById('tableContent');
+            // if table is not showing, click the button to show table which is defined as the id of tableContent
+            if (table.style.display === 'none') {
+                table.style.display = 'table';
+            // else statement here is for if table is already visible, and you want to hide it by clicking button 
+            } 
+            else {
+                table.style.display = 'none';
+            }
+        }
+        
+    </script>
+</body>
+</html>
