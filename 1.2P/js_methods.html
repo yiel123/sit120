@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Example</title>
+</head>
+<body>
+    <button id="methodsButton">Perform all methods</button>
+    <script>
+        document.getElementById("methodsButton").addEventListener("click", function() {
+            // all string methods
+            let letters = "ABCDE";
+            console.log("Length of letters: " + letters.length);
+            let fruits = "Lemon, Orange, Apple";
+            let extracted = fruits.slice(7, 13);
+            console.log("Extracted substring: " + extracted);
+            // extracts everything from 7th index 'Orange, Apple'
+            console.log(fruits.slice(7));
+            console.log(fruits.slice(-12, -6));
+            let textOne = "my website";
+            let newText = textOne.replace("website", "orange");
+            console.log(newText);
+            let textTwo = "I love oranges, oranges are very thirst-quenching";
+            // all occurrences of 'oranges' get replaced by 'watermelons ' because of the '/.../g'
+            let newTextTwo = textTwo.replace(/oranges/g, "watermelons");
+            console.log(newTextTwo);
+            let textLower = "hello world";
+            let textUpper = textLower.toUpperCase();
+            console.log(textUpper);
+            let textThree = "      Hello World!      ";
+            // removes blank space gaps
+            let textFour = textThree.trim();
+            console.log(textFour);
+
+            // Number Methods
+            let x = 123;
+            console.log(x.toString());
+            let y = 8.31236;
+            console.log(y.toExponential(2));
+            let z = 5.123;
+            console.log(z.toFixed(2));
+            console.log(z.toPrecision(2));
+            let stringNumber = "42";
+            // converts an integer string to an actual integer value
+            let integerNumber = Number.parseInt(stringNumber);
+            console.log(integerNumber); // Output: 42
+
+            //Array Methods
+            // using const in array means array is unchangeable or immutable
+
+            const fruitss = ["Banana", "Orange", "Apple", "Mango"];
+            let size = fruitss.length;
+            // converts array to string with each item separated by comma
+            console.log(fruitss.toString);
+            // behaves like toString() but allows you to select what separate each item
+            console.log(fruitss.join("&"));
+            // removes last item
+            console.log(fruitss.pop());
+            poppedOutFruitss = fruitss.pop();
+            console.log(poppedOutFruitss);
+            // original fruitss array had 2 elements removed using the pop() method, and then one element ("green apple") was added back using the push() method.
+            // go over this again
+            console.log(fruitss.push("green apple"));
+
+
+            //Date Methods
+            const currentDate = new Date();
+            console.log(currentDate);
+            // 7 numbers specify year, month, day, hour, minute, second, and millisecond (in that order):
+            const date = new date(2030, 12, 21, 8, 33, 32, 0);
+            console.log(createDate);
+            // 6 numbers specify year, month, day, hour, minute, second:
+            const datee = new datee(2050, 12, 30, 10, 21, 50);
+            console.log(datee);
+            // 5 numbers specify year, month, day, hour, and minute:
+            const dateee = new dateee(2022, 11, 23, 8, 21);
+            console.log(dateee);
+            // 4 numbers specify year, month, day, and hour:
+            const dateeee = new dateeee(2021, 12, 3, 12);
+            console.log(dateeee);
+            // 3 numbers specify year, month, and day:
+            const dateeeee = new dateeeee(2018, 11, 24);
+            
+            function myFunction(p1, p2) {
+                return p1 * p2;
+            }
+            // Call the function and pass values for p1 and p2
+            let result = myFunction(12, 3); // This will return 36
+            console.log(result); //Output 36 in console
+
+            function myFunctioon(a1, a2, a3) {
+                return a1 + a2 + a3;
+            }
+            let resultt = myFunctioon(1, 2, 5); //this will return 8
+            console.log(resultt); //output 8 in console
+
+
+
+
+          
+
+            
+
+
+            // inspect--> console to see the result after clicking on the button
+        });
+    </script>
+</body>
+</html>

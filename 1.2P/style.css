@@ -1,0 +1,169 @@
+/* universal */
+/* applies to all elements*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    /* the background colour of entire website */
+    background-color: #eee;
+}
+
+.wrapper-nav-items {
+    /* create 20px to margin which creates space outside the wrapper element, pushing it away from the edges of webpage */
+    /* 2nd value makes left and right margin equal which positions wrapper in center horizontally */
+    margin: 0px auto;
+    width: 100%;
+}
+
+.wrapper-content {
+    /* I used this here, but still why isn't my content in the centre but all to the left??*/
+    /* How do I fix this */
+    margin: 0px auto;
+    width: 100%;
+}
+
+/* navigation container */
+nav {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    
+    
+}
+
+
+
+/* style the unordered list itself */
+ul {
+    /* eliminates any space outside the boundary of an element (external) */
+    margin: 0;
+    /* eliminates any spacing inside the boundary around an element (internal)  */
+    padding: 0;
+    margin-left: 60px;
+
+}
+
+/* style all individual list items inside the unordered list*/
+ul li {
+    /* rids of the dot next to individual list items */
+    list-style:none; 
+    /* shifts the individual list items to be horizontal */
+    display: inline-block;
+    /* rids of all the gaps between individual list item by shifting every each of them to the left */
+    /* REMINDER not each word, it is individual list item otherwise the 'about me' wouldn't have a tiny gap still even after applying this style as the whole phrase 'about me' is treated as an individual list item */
+    /* "If you want to remove the gap for 'about me' or each word in a phrase, apply this style to 'ul li a'. */
+    float: left;
+    /* centers the individual list items by matching the line height with height defined in nav element for styling which in effect vetically centers it*/
+    line-height: 100px;
+}
+/* style all the actual text content within links that are list items by targetting <a> element within individual lists in an unordered list*/
+/* Home, About me, Contact */
+ul li a {
+    /* allows you click even when above or below the text */
+    display: block; 
+    /* rids of underline under text */
+    text-decoration: none;
+    font-size: 14px;
+    font-family: arial;
+    color: darkslategrey;
+    /* eliminates top and bottom padding*/
+    /* add 20px to left and right padding */
+    padding: 0px 20px;
+}
+
+/* targets anchor elements which are the text content that acts as link in all individual list within an unordered list */
+ul li a:hover {
+    color: red;
+}
+
+
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+    /* adjusts for smaller screens such as mobile phones */
+    .wrapper-nav-items {
+        text-align: center;
+    }
+
+    ul {
+        /* Remove default list padding */
+        padding: 0; 
+    }
+
+    ul li {
+        /* displays list items in a row */
+        display: inline-block; 
+        /* removes default margin */
+        margin: 0;
+    }
+
+    ul li a {
+        padding: 10px 20px;
+        /* makes anchor tags fill the entire list item */
+        display: block; 
+    }
+
+    .img-goku {
+        /* ensures that it completely fills the parent container's width */
+        width: 100%;
+        /* makes sure that the width will not exceed this even on larger screen */
+        max-width: 150px;
+    }  
+    .img-vegeta {
+        /* ensures that it completely fills the parent container's width */
+        width: 100%;
+        /* makes sure that the width will not exceed this even on larger screen */
+        max-width: 150px;
+    }
+
+    .img-frieza {
+        /* ensures that it completely fills the parent container's width */
+        width: 100%;
+        /* makes sure that the width will not exceed this even on larger screen */
+        max-width: 150px;
+    }
+
+
+
+
+    @media screen and (max-width: 1024px) {
+        /* adjusts for tablet-sized screens */
+    
+        .wrapper-nav-items {
+            text-align: center;
+        }
+    
+        ul {
+            margin-left: 0;
+        }
+    
+        ul li {
+            display: block;
+            float: none;
+            line-height: normal;
+            margin-bottom: 10px;
+        }
+    
+        ul li a {
+            padding: 10px 20px;
+        }
+    
+        .img-goku {
+            width: 100%;
+            max-width: 200px;
+        }
+        
+        .img-vegeta {
+        width: 100%;
+        max-width: 200px;
+        }
+
+        .img-frieza {
+        width: 100%;
+        max-width: 200px;
+        }
+
+    }

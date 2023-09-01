@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>responsive website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav> 
+    <!-- reason for placing the wrapper-nav-items after the <nav> and before the </nav> is so that the white bar still remains and appears in full width -->
+    <!-- if placed before <nav> and after </nav> than the white bar would shrink if width of such class is 1000px for instance. -->
+    <div class="wrapper-nav-items">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About me</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+<button id="scrollToEndButton">hover over button to reach the end of the page</button>
+     
+<div class="wrapper-content">
+    <div class="character-profile-one">
+        <img title="Image of Goku" class="img-goku" src="goku.jpg" alt="Goku">
+        <article class="img-info">
+            <h2>Goku</h2>
+            <p>Goku starts off as a relatively small and lean child, but as he matures and undergoes intense training, his body becomes more muscular and defined.</p>
+        </article>
+    </div>
+    <div class="character-profile-two">
+        <img title="Image of Vegeta" class="img-vegeta" src="vegeta.jpg" alt="Vegeta">
+        <article class="img-info">
+            <h2>Vegeta</h2>
+            <p>Vegeta has a well-defined and muscular build, with black hair and his signature widow's peak</p>
+        </article>
+    </div>
+    <div class="character-profile-three">
+        <img title="Image of Frieza" class="img-frieza" src="frieza.jpg" alt="Frieza">
+        <article class="img-info">
+            <h2>Frieza</h2>
+            <p>Frieza has a humanoid body with sleek, purplish-white skin that appears both smooth and slightly textured. His body is slender and graceful, emphasizing his speed and agility.</p>
+        </article>
+    </div>
+</div>
+
+<div id="endMarker"></div>
+<script>
+    // activated when button is hovered over, function within {...} gets executed
+    // automatically scrolls to end of the page in a smooth motion
+    document.getElementById('scrollToEndButton').addEventListener('mouseover', function() {
+        let endMarker = document.getElementById('endMarker');
+        endMarker.scrollIntoView({ behavior: 'smooth' });
+    });
+</script>
+
+<footer>
+    <p>&copy; 2023 My Website. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
